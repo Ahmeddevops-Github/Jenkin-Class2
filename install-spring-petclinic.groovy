@@ -6,7 +6,7 @@ node{
     ])
 
     if(node_ip.length() > 7 ){
-        stage("Gi Clone Kellys Repo"){
+        stage("Git Clone Kellys Repo"){
             git url: 'https://github.com/ksalrin/anisble-springpetclinic.git'
         }
         
