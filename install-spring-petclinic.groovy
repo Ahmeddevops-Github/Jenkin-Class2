@@ -11,7 +11,7 @@ node{
         }
         
         withCredentials([sshUserPrivateKey(credentialsId: 'Jenkins-ssh-key', keyFileVariable: 'SSH_KEY', passphraseVariable: '', usernameVariable: 'SSH_USERNAME')]) {
-            stage("Install Prerequisites"){
+            stage("Instll Prerequisites"){
                 sh """
                     export ANSIBLE_HOST_KEY_CHECKING=False
                     ansible-playbook -i "${node_ip}," --private-key $SSH_KEY -u $SSH_USERNAME prerequisites.yml
